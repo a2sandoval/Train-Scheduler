@@ -9,5 +9,9 @@ body {
 
  .jumbotron {
     background-color:black !important;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 600px;
     color:white;
+    background-image: url('https://images.pexels.com/photos/72594/japan-train-railroad-railway-72594.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
   }

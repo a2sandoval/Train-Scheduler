@@ -23,54 +23,54 @@
     <!-- Page Content -->
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">Employee Data Management</h1>
+            <h1 class="display-4">Train Scheduler</h1>
+            <h2 class="display-4">Admin Mode</h2>
             <hr class="my-4">
-            <p>A Comprehensive Directory of Employee Billable Hours</p>
+            <p>Train arrival and departure times!</p>
             
           </div>
         <form>
-        <h3>Add Employee</h3>
+        <h3>Add Train Information</h3>
           <div class="form-group row">
-              <label for="example-text-input" class="col-2 col-form-label">Name</label>
+              <label for="example-text-input" class="col-2 col-form-label">Train Name</label>
               <div class="col-10">
-                <input class="form-control" type="text" value="" id="employee-name">
+                <input class="form-control" type="text" value="" id="train-name" required>
               </div>
             </div>
 
             <div class="form-group row">
-              <label for="example-text-input" class="col-2 col-form-label">Role</label>
+              <label for="example-text-input" class="col-2 col-form-label">Destination</label>
               <div class="col-10">
-                <input class="form-control" type="text" value="" id="employee-title">
+                <input class="form-control" type="input" value="" id="train-destination" required>
               </div>
             </div>
 
             <div class="form-group row">
-                <label for="example-text-input" class="col-2 col-form-label">Start Date</label>
+                <label for="example-text-input" class="col-2 col-form-label">First Train Time</label>
                 <div class="col-10">
-                  <input class="form-control" type="date" value="" id="start-date">
+                  <input class="form-control" type="time" value="" id="arrival-time" required>
                 </div>
               </div>
 
               <div class="form-group row">
-                  <label for="example-text-input" class="col-2 col-form-label">Monthly Rate</label>
+                  <label for="example-text-input"  class="col-2 col-form-label">Frequency (minutes)</label>
                   <div class="col-10">
-                    <input class="form-control" type="text" value="" id="monthly-rate">
+                    <input class="form-control" type="text" placeholder="minutes" value="" id="frequency" required>
                   </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary" id="form-submit">Submit</button>
+                <button type="submit" class="btn btn-primary" id="form-submit">Add Train</button>
               </form>
       <div class="row">
         <div class="col-lg-12 text-center">
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Employee Name</th>
-                    <th scope="col">Role</th>
-                    <th scope="col">Start Date</th>
-                    <th scope="col">Monthly Rate ($)</th>
-                    <th scope="col">Months Worked</th>
-                    <th scope="col">Total Billed ($)</th>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">First Train (24:00hr)</th>
+                    <th scope="col">Frequency (minutes)</th>
+                    <th scope="col">Next Train Arrival Times</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -85,6 +85,7 @@
         <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
         <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD3pdmr3i6v6QaCjbeLUz1qLGDfsaFQVdA&libraries=places"></script>
         <script src="myfile.js"></script>
   </body>
 
